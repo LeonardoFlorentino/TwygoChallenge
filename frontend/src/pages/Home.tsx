@@ -21,26 +21,48 @@ export const Home: React.FC = () => {
   }, []);
 
   const handleFilter = (filters: {
+    status: string;
     title: string;
     description: string;
-    startDate: string;
     endDate: string;
   }) => {
-    const { title, description, startDate, endDate } = filters;
+    const { status, title, description, endDate } = filters;
 
-    const filtered = courses.filter((course) => {
-      return (
-        (title === "" ||
-          course.title.toLowerCase().includes(title.toLowerCase())) &&
-        (description === "" ||
-          course.description
-            .toLowerCase()
-            .includes(description.toLowerCase())) &&
-        (startDate === "" ||
-          new Date(course.startDate) >= new Date(startDate)) &&
-        (endDate === "" || new Date(course.endDate) <= new Date(endDate))
-      );
-    });
+    const filtered = courses
+      .filter((course) => {
+        const courseEndDate = new Date(course.endDate);
+        const today = new Date();
+
+        // Filtragem por título e descrição
+        const matchesTitle =
+          title === "" ||
+          course.title.toLowerCase().includes(title.toLowerCase());
+        const matchesDescription =
+          description === "" ||
+          course.description.toLowerCase().includes(description.toLowerCase());
+
+        // Filtragem por status
+        const matchesStatus =
+          status === "todos" ||
+          (status === "ativos" && courseEndDate >= today) ||
+          (status === "inativos" && courseEndDate < today);
+
+        // Filtragem por data de término (opcional, baseado em endDate do filtro)
+        const matchesEndDate =
+          endDate === "" || courseEndDate > new Date(endDate);
+
+        return (
+          matchesTitle && matchesDescription && matchesStatus && matchesEndDate
+        );
+      })
+      .sort((a, b) => {
+        // Ordena os cursos pela data mais recente em relação à data atual
+        const dateA = new Date(a.endDate);
+        const dateB = new Date(b.endDate);
+
+        // Ordena de forma decrescente (mais recente primeiro)
+        return dateA.getTime() - dateB.getTime();
+      });
 
     setFilteredCourses(filtered);
   };

@@ -9,7 +9,12 @@ interface CourseListProps {
 
 export const CourseList: React.FC<CourseListProps> = ({ courses }) => {
   return (
-    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={8} p={4}>
+    <SimpleGrid
+      columns={[1, 1, 2, 3, 4]}
+      spacing={8}
+      p={4}
+      minChildWidth="260px"
+    >
       {courses.map((course) => (
         <CourseListItem key={course.id} course={course} />
       ))}

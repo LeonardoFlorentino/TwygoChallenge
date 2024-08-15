@@ -7,23 +7,23 @@ export const courses: Course[] = [
     description: "Aprenda o básico da programação usando Python.",
     startDate: "2024-07-01",
     endDate: "2024-08-12",
-    videos: ["video1.mp4", "video2.mp4"],
+    url: "https://www.youtube.com/watch?v=4p7axLXXBGU",
   },
   {
     id: 2,
     title: "JavaScript Avançado",
     description: "Domine conceitos e técnicas avançadas de JavaScript.",
-    startDate: "2024-06-15",
+    startDate: "2024-08-04",
     endDate: "2024-08-20",
-    videos: ["video3.mp4", "video4.mp4"],
+    url: "https://www.youtube.com/watch?v=RvcRxEeJqi8",
   },
   {
     id: 3,
     title: "Bootcamp de Desenvolvimento Web",
     description: "Um guia completo para se tornar um desenvolvedor web.",
-    startDate: "2024-05-10",
+    startDate: "2024-08-10",
     endDate: "2024-08-18",
-    videos: ["video5.mp4", "video6.mp4", "video7.mp4"],
+    url: "https://www.youtube.com/watch?v=zJSY8tbf_ys",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const courses: Course[] = [
     description: "Uma introdução à ciência de dados e aprendizado de máquina.",
     startDate: "2024-06-20",
     endDate: "2024-08-30",
-    videos: ["video8.mp4", "video9.mp4"],
+    url: "https://www.youtube.com/watch?v=bEs1OKnuSaA",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ export const courses: Course[] = [
     description: "Entenda o básico de computação em nuvem com AWS.",
     startDate: "2024-07-05",
     endDate: "2024-08-14",
-    videos: ["video10.mp4"],
+    url: "https://www.youtube.com/watch?v=QW4gA18yGh0",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ export const courses: Course[] = [
       "Aprenda como proteger sistemas e dados contra ameaças cibernéticas.",
     startDate: "2024-07-25",
     endDate: "2024-08-22",
-    videos: ["video11.mp4", "video12.mp4"],
+    url: "https://www.youtube.com/watch?v=yAHCyvXfLeA",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ export const courses: Course[] = [
     description: "Explore os fundamentos da inteligência artificial.",
     startDate: "2024-06-01",
     endDate: "2024-08-10",
-    videos: ["video13.mp4"],
+    url: "https://www.youtube.com/watch?v=ucoFLlasfIo",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ export const courses: Course[] = [
     description: "Construa aplicativos móveis usando Flutter.",
     startDate: "2024-04-15",
     endDate: "2024-08-09",
-    videos: ["video14.mp4", "video15.mp4"],
+    url: "https://www.youtube.com/watch?v=X-XfVvd41O8",
   },
   {
     id: 9,
@@ -73,7 +73,7 @@ export const courses: Course[] = [
       "Implemente práticas de DevOps para melhor entrega de software.",
     startDate: "2024-06-10",
     endDate: "2024-08-28",
-    videos: ["video16.mp4"],
+    url: "https://www.youtube.com/watch?v=bwO8EZf0gLI",
   },
   {
     id: 10,
@@ -82,7 +82,7 @@ export const courses: Course[] = [
       "Aprenda a projetar e gerenciar bancos de dados de forma eficaz.",
     startDate: "2024-05-20",
     endDate: "2024-08-11",
-    videos: ["video17.mp4", "video18.mp4"],
+    url: "hhttps://www.youtube.com/watch?v=Ofktsne-utM",
   },
   {
     id: 11,
@@ -90,7 +90,7 @@ export const courses: Course[] = [
     description: "Gerencie projetos de forma eficaz usando metodologias ágeis.",
     startDate: "2024-07-01",
     endDate: "2024-08-25",
-    videos: ["video19.mp4"],
+    url: "https://www.youtube.com/watch?v=Ipjxv5uU1R8",
   },
   {
     id: 12,
@@ -98,6 +98,6 @@ export const courses: Course[] = [
     description: "Entenda os fundamentos da tecnologia blockchain.",
     startDate: "2024-05-01",
     endDate: "2024-08-07",
-    videos: ["video20.mp4"],
+    url: "https://www.youtube.com/watch?v=dkElPTevoR4",
   },
 ];
