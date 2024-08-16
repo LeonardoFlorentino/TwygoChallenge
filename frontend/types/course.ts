@@ -5,5 +5,10 @@ export interface Course {
   description: string;
   startDate: string;
   endDate: string;
+  urls: Url[];
+}
+
+interface Url {
+  id: number;
   url: string;
 }

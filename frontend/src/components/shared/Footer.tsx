@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <Box bg="#AF61FF" color="white" p={4} mt={10}>
       <Text align="center">
-        © {new Date().getFullYear()} Twygo. Todos os direitos reservados.
+        © {new Date().getFullYear()} Chiravante. Todos os direitos reservados.
       </Text>
     </Box>
   );
